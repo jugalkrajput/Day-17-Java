@@ -1,0 +1,63 @@
+📘 Day 17 – Maven
+==================
+
+✅ What I learned today
+
+1. What is Maven?
+   --------------
+
+-> Build automation – compile, test, package with one command
+
+-> Dependency management – automatically downloads JARs from central repo
+
+2. Standard Directory Structure
+   -----------------------------
+
+my-project/
+├── pom.xml
+└── src/
+    ├── main/
+    │   ├── java/     (source code)
+    │   └── resources/ (config files)
+    └── test/
+        └── java/     (unit tests)
+
+
+3. pom.xml (Project Object Model)
+   ---------------------------------
+
+<project>
+    <groupId>com.student</groupId>
+    <artifactId>student-crud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+    </dependencies>
+</project>
+
+
+4. Maven Lifecycle Commands
+   -------------------------
+
+Command		|	Result
+----------------|----------------------------------
+mvn clean	|	Deletes target/
+mvn compile	|	Compiles Java to .class
+mvn package	|	Creates JAR file
+mvn install	|	Installs JAR to local repo
+
+5. Practice Task
+   --------------
+
+-> Created a Maven project student-crud
+
+-> Added mysql-connector-j in pom.xml
+
+-> Moved my Day 16 JDBC code into src/main/java
+
+-> Ran the project – no manual JAR downloads needed!
